@@ -34,19 +34,13 @@ export default class Add_lab extends Component {
                         </Form.Group>
                     </Form>
                     <br />
-                    <FormGroup>
-                        <FormControlLabel
-                            control={<Switch color="primary" checked={this.state.openChecked} onChange={() => this.setState({ openChecked: !(this.state.openChecked) })} />}
-                            label="Open"
-                        />
-                    </FormGroup>
-                    <br />
-                    <FormGroup>
-                        <FormControlLabel
-                            control={<Switch color="primary" checked={this.state.availableChecked} onChange={() => this.setState({ availableChecked: !(this.state.availableChecked) })} />}
-                            label="Available"
-                        />
-                    </FormGroup>
+                    <Form>
+                        <Form.Control as="select">
+                            <option>Open</option>
+                            <option>Disable</option>
+                            <option>Close</option>
+                        </Form.Control>
+                    </Form>
                     <br />
                     {/* <h4>Available</h4>
                     <br /> */}
