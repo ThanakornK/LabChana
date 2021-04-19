@@ -21,11 +21,12 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
+
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "jest --watchAll",
-    "eject": "react-scripts eject"
+    "test": "jest --no-cache",
+    "start": "webpack-dev-server --progress --colors --inline --env.dev",
+    "build": "webpack -p --progress --env.prod",
+    "deploy": "yarn build && aws s3 sync build/ s3://startercicd.com--delete"
   },
   "eslintConfig": {
     "extends": [
