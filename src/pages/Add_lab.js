@@ -76,7 +76,7 @@ export default class Add_lab extends Component {
                                     id='time-picker'
                                     label='Available Time'
                                     value={this.state.selectedDate}
-                                    onChange={(selectdate) => this.state({ date: this.state.selectedDate = selectdate })}
+                                    onChange={(selectdate) => this.setState({ date: this.state.selectedDate = selectdate })}
                                     KeyboardButtonProps={{
                                         'aria-label': 'change date'
                                     }}
@@ -92,7 +92,7 @@ export default class Add_lab extends Component {
                                     format='dd/MM/yyyy'
                                     margin="normal"
                                     id='date-picker'
-                                    label='Disable date'
+                                    label='Due date'
                                     value={this.state.selectedDate}
                                     onChange={(date) => this.setState({ selectedDate: date })}
                                     KeyboardButtonProps={{
@@ -102,9 +102,9 @@ export default class Add_lab extends Component {
                                 <KeyboardTimePicker
                                     margin="normal"
                                     id='time-picker'
-                                    label='Disable Time'
+                                    label='Due Time'
                                     value={this.state.selectedDate}
-                                    onChange={(selectdate) => this.state({ date: this.state.selectedDate = selectdate })}
+                                    onChange={(selectdate) => this.setState({ date: this.state.selectedDate = selectdate })}
                                     KeyboardButtonProps={{
                                         'aria-label': 'change date'
                                     }}
@@ -113,53 +113,9 @@ export default class Add_lab extends Component {
                             </Container>
                         </MuiPickersUtilsProvider>
                     </div>
-
-                    <br />
-                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-                        <div><h3>List problems</h3></div>
-                        <div>
-                            <Button onClick={() => { window.location.pathname = '/labN/add_p' }}>
-                                New problem
-                            </Button>
-                        </div>
-                    </div>
-                    <br />
-                    <div>
-                        <ListGroup>
-                            <ListGroup.Item  >
-                                {/* <div className="textList">
-                                    <div style={{ flexGrow: "2" }}>01418113-01-01</div>
-                                    <div ><Button variant="secondary" onClick={() => { window.location.pathname = '/edit/labN' }}>Edit</Button></div>
-                                    <div style={{ paddingLeft: "10px" }}>
-                                        <Button variant="secondary"
-                                            onClick={() => { window.location.pathname = '/labN/pM/ls_nisit' }}>
-                                            View
-                                        </Button>
-                                    </div>
-
-                                </div> */}
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </div>
-                    {/* <br /> */}
-                    {/* <div>
-                        <h4>Students</h4>
-                    </div>
-                    <br />
-                    <div>
-                        <ListGroup>
-                            <ListGroup.Item  onClick={() => {window.location.pathname = '/labN/userID/do/pM'}}>
-                                <div className="textList" style={{justifyContent:"space-around"}}>
-                                    <div style={{flexGrow:"1"}}>6110401625</div>
-                                    <div style={{flexGrow:"2"}}>Thanakorn Kittayathon</div>
-                                    <div style={{flexGrow:"1"}}>(TTTT)</div> 
-                                </div>
-                            </ListGroup.Item>
-                        </ListGroup>
-                    </div> */}
                     <br />
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
-                        <Button variant="danger">Delete Problem</Button>
+                        <Button variant="danger">Delete Lab</Button>
                         <Button>Apply</Button>
                     </div>
                 </div>

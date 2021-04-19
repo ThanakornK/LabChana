@@ -23,8 +23,6 @@ export default class Login extends Component {
                             </div>
                         </div>
 
-
-
                     </div>
                     <div style={{ padding: "15px" }}>
                         <div className="vl"></div>

@@ -1,7 +1,17 @@
-FROM node:alpine
-WORKDIR '/app'
+# base image
+FROM node:9.11
 
-COPY package.json .
+# set working directory
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+
+# add `/usr/src/app/node_modules/.bin` to $PATH
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+# install and cache app dependencies
+COPY package.json /usr/src/app/package.json
 RUN npm install
-COPY . .
-CMD ["npm",'start']
+RUN npm install react-scripts -g
+
+# start app
+CMD ["npm", "start"]

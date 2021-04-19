@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col, Form, ListGroup, Row } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import './../style/Table.css';
 
 export default class ListLab extends Component {

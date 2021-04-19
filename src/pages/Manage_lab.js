@@ -138,6 +138,9 @@ export default class Manage_prob extends Component {
                                             View
                                         </Button>
                                     </div>
+                                    <div style={{ paddingLeft: "10px" }}>
+                                        <Button variant="danger">X</Button>
+                                    </div>
 
                                 </div>
                             </ListGroup.Item>
@@ -161,7 +164,7 @@ export default class Manage_prob extends Component {
                     </div> */}
                     <br />
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
-                        <Button variant="danger">Delete Problem</Button>
+                        <Button variant="danger">Delete Lab</Button>
                         <Button>Apply</Button>
                     </div>
                 </div>
