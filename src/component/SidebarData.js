@@ -6,13 +6,13 @@ import * as RiIcons from "react-icons/ri";
 export const SidebarData = [
     {
         title: "Lab",
-        icon: <IoIcons.IoIosArchive/>,
+        icon: <AiIcons.AiFillCode/>,
         path: '/manage'
     },
 
     {
         title: "Student",
-        icon: <AiIcons.AiOutlineShoppingCart/>,
+        icon: <AiIcons.AiOutlineUser/>,
         path: '/manage/student'
     },
 ]

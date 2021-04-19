@@ -24,7 +24,7 @@ export default class Do_prob extends Component {
                                 <p>
                                 (----)
                                 </p>
-                                <Button size="sm" style={{marginLeft:"10px"}} onClick={() => { window.location.pathname = '/labN/do/pM/case' }}>Case detail</Button>
+                                
                         </div>
                     </Card.Header>
                     <Card.Body>

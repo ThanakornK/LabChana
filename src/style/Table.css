@@ -18,3 +18,8 @@
     flex-direction: row;
     align-items: baseline;
 }
+
+.vl {
+    border-left: 6px solid grey;
+    height: 700px;
+}

@@ -33,22 +33,12 @@ export default class Add_prob extends Component {
                                     <Form.File id="exampleFormControlFile1" label="file output" />
                                 </Form.Group>
                             </Form>
-
-                        </div>
-                        <br />
-                        <div style={{ width: "70%", padding: "5px", border: "2px solid lightgray", borderRadius: "5px", display: "flex", flexDirection: "row", marginLeft: "15%" }} >
-                            <div style={{ flexGrow: "2" }}>
-                                <Form.Control type="text" placeholder="Detail(Hint)" />
-                            </div>
-                            <div style={{ paddingLeft: "5px" }}>
-                                <Form.Group controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label="Hide detail" />
-                                </Form.Group>
-                            </div>
                             <div style={{ paddingLeft: "5px" }}>
                                 <Button size="sm" variant="danger" > X </Button>
                             </div>
                         </div>
+                        <br />
+                        
                     </div>
                     <br />
                     <div className="center">

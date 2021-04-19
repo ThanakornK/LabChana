@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
 import Menu from './component/Menu';
 
 
@@ -19,6 +18,7 @@ import User_do_prob from './pages/User_do_prob';
 import Manage_student from './pages/Manage_student';
 import Manage_student_lab from './pages/Manage_student_lab';
 import Manage_student_prob from './pages/Manage_student_prob';
+import Login from './pages/Login';
 import './style/Table.css';
 
 function App() {
@@ -27,6 +27,8 @@ function App() {
       <Menu />
         <div style={{ width: "100%", height: "100vh"}}>
           <Switch>
+            <Route exact path="/" component={Login} />
+
             {/* Teacher flow */}
             <Route exact path="/manage" component={Manage_main} />
             <Route exact path="/manage/student" component={Manage_student} />
