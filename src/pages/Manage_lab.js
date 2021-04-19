@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
-import { ListGroup, Button, Container, Form } from 'react-bootstrap'
+import { ListGroup, Button,  Form } from 'react-bootstrap'
 import Sidebar from '../component/Sidebar';
-
-import Switch from '@material-ui/core/Switch';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import './../style/Table.css'
 
 export default class Manage_prob extends Component {
@@ -38,19 +34,16 @@ export default class Manage_prob extends Component {
                         </Form.Group>
                     </Form>
                     <br />
-                    <FormGroup>
-                        <FormControlLabel
-                            control={<Switch color="primary" checked={this.state.openChecked} onChange={() => this.setState({openChecked: !(this.state.openChecked)})} />}
-                            label="Open"
-                        />
-                    </FormGroup>
-                    <br />
-                    <FormGroup>
-                        <FormControlLabel
-                            control={<Switch color="primary" checked={this.state.availableChecked} onChange={() => this.setState({ availableChecked: !(this.state.availableChecked) })} />}
-                            label="Available"
-                        />
-                    </FormGroup>
+                    <Form>
+                        <Form.Group controlId="exampleForm.ControlSelect1">
+                            <Form.Label>Status</Form.Label>
+                            <Form.Control as="select">
+                                <option>Open</option>
+                                <option>Disable</option>
+                                <option>Close</option>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
                     <br />
                     {/* <h4>Available</h4>
                     <br />
