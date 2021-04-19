@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { ListGroup, Button, Container, Form } from 'react-bootstrap'
 import Sidebar from '../component/Sidebar';
-import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+
+import Switch from '@material-ui/core/Switch';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import 'date-fns'
 import DateFnsUtils from '@date-io/date-fns'
 import {
@@ -19,7 +22,8 @@ export default class Manage_prob extends Component {
 
         this.state = {
             currentDate: date,
-            selectedDate: date
+            selectedDate: date,
+            checked: false
         };
     }
 
@@ -28,7 +32,7 @@ export default class Manage_prob extends Component {
 
 
         return (
-            <div style={{ width: "90%",height:"100%", display: "flex", flexDirection: "row" }}>
+            <div style={{ width: "90%", height: "100%", display: "flex", flexDirection: "row" }}>
                 <div style={{ flexGrow: "0", backgroundColor: "grey" }}>
                     <Sidebar />
                 </div>
@@ -43,8 +47,13 @@ export default class Manage_prob extends Component {
                         </Form.Group>
                     </Form>
                     <br />
-                    <BootstrapSwitchButton checked={true} onlabel="Open" offlabel="Close" width={100} />
-                    <br />
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Switch color="primary" checked={this.state.checked} onChange={() => this.setState({checked: !(this.state.checked)})} />}
+                            label="Open"
+                        />
+                    </FormGroup>
+
                     <br />
                     <h4>Available</h4>
                     <br />

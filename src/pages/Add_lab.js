@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { ListGroup, Button, Container, Form } from 'react-bootstrap'
 import Sidebar from '../component/Sidebar';
-import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+
+
 import 'date-fns'
+import Switch from '@material-ui/core/Switch';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import DateFnsUtils from '@date-io/date-fns'
 import {
     MuiPickersUtilsProvider,
@@ -19,13 +23,14 @@ export default class Add_lab extends Component {
 
         this.state = {
             currentDate: date,
-            selectedDate: date
+            selectedDate: date,
+            checked: false
         };
     }
 
     render() {
         return (
-            <div style={{ width: "90%", display: "flex", flexDirection: "row" }}>
+            <div style={{ width: "90%", height: "100%", display: "flex", flexDirection: "row" }}>
                 <div style={{ flexGrow: "0", backgroundColor: "grey" }}>
                     <Sidebar />
                 </div>
@@ -40,7 +45,12 @@ export default class Add_lab extends Component {
                         </Form.Group>
                     </Form>
                     <br />
-                    <BootstrapSwitchButton checked={true} onlabel="Open" offlabel="Close" width={100} />
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Switch color="primary" checked={this.state.checked} onChange={() => this.setState({ checked: !(this.state.checked) })} />}
+                            label="Open"
+                        />
+                    </FormGroup>
                     <br />
                     <br />
                     <h4>Available</h4>
