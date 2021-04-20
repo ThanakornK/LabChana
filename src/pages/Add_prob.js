@@ -22,15 +22,15 @@ export default class Add_prob extends Component {
                     </div>
                     <br />
                     <div style={{ width: "100%" }}>
-                        <div className="Table_Row" style={{ width: "50%", display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", marginLeft: "25%" }}>
+                        <div className="Table_Row" style={{ width: "80%", display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", marginLeft: "10%", paddingTop:"10px" }}>
                             <Form>
                                 <Form.Group>
-                                    <Form.File id="exampleFormControlFile1" label="file input" />
+                                    <Form.Control as="textarea" placeholder="input" />
                                 </Form.Group>
                             </Form>
                             <Form>
                                 <Form.Group>
-                                    <Form.File id="exampleFormControlFile1" label="file output" />
+                                    <Form.Control as="textarea" placeholder="output" />
                                 </Form.Group>
                             </Form>
                             <div style={{ paddingLeft: "5px" }}>
