@@ -10,9 +10,9 @@ Use Bootstrap framework and some componets from Material UI
 
 Clone this git https://github.com/ThanakornK/LabChana.git
 
-# docker-compose up -d --build
+ docker-compose up -d --build
 
-# docker-compose up
+ docker-compose up
 
 it will run in localhoost:3000
 
